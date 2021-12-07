@@ -1,0 +1,100 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.7;
+  color: black;
+}
+
+.section-about {
+  background-color: #202731;
+  padding: 25rem 0;
+  padding-block-end: 25rem;
+  margin-top: -20vh;
+}
+
+.spacer {
+  aspect-ratio: 900/200;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.blob-section {
+  background-color: #202731;
+  text-align: center;
+  padding-top: 10rem;
+}
+
+.layer1 {
+  background-image: url(../img/layered-peaks-haikei.svg);
+}
+
+.layer2 {
+  background-image: url(../img/layered-peaks-haikei-upsidedown.svg);
+}
+
+.layer3 {
+  background-image: url(../img/wave-haikei.svg);
+}
+
+.flip {
+  transform: rotate(180deg);
+}
+
+.layer4 {
+  background-image: url(img/blob-haikei.svg);
+}
+.blob-motion {
+  position: absolute;
+  transform: translateY(-20%);
+  z-index: 0;
+}
+.blob-content {
+  z-index: 1;
+}
+.layer1-animated {
+  width: 100%;
+  background: url(../img/layered-peaks-haikei-animation.svg);
+}
+
+.layer2-animated {
+  width: 100%;
+  background: url(../img/layered-peaks-haikei-upsidedown-animation.svg);
+}
+
+.section-about {
+  background-color: $color-black;
+  padding: 25rem;
+  padding-top: 25rem;
+  margin-top: -20vh;
+
+  @include respond(tab-port) {
+    padding: 20rem 0;
+  }
+}
+
+.section-features {
+  padding: 2rem;
+  padding-top: 0%;
+  background-color: $color-black;
+  @include respond(tab-port) {
+    padding: 10rem 0;
+  }
+}
+
+.section-projects {
+  background-color: $color-black;
+  padding: 10rem 0 15rem 0;
+
+  @include respond(tab-port) {
+    padding: 20rem 0 10rem 0;
+  }
+}

@@ -1,0 +1,85 @@
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  //   font-size: 16px;
+  line-height: 1.7;
+  color: $color-black;
+}
+
+.header--primary {
+  & {
+    color: $color-white;
+    text-transform: uppercase;
+    backface-visibility: hidden;
+    margin-bottom: 6rem;
+  }
+  &--name {
+    display: block;
+    font-size: 6rem;
+    font-weight: 400;
+    letter-spacing: 3.5rem;
+
+    animation-name: moveInLeft;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-out;
+  }
+
+  &-primary--title {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1.85rem;
+
+    animation-name: moveInRight;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-out;
+  }
+}
+
+.heading-secondary {
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  display: inline-block;
+  padding-bottom: 3rem;
+  background-image: linear-gradient(
+    to right,
+    $color-wave-light-op,
+    $color-wave-light
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  letter-spacing: 0.2rem;
+  transition: all 0.2s;
+
+  @include respond(tab-port) {
+    font-size: 3rem;
+  }
+
+  @include respond(phone) {
+    font-size: 2.5rem;
+  }
+
+  &:hover {
+    transform: skewY(2deg) skewX(15deg) scale(1.1);
+    text-shadow: 0.5rem 1rem 2rem rgba($color-black, 0.2);
+  }
+}
+
+.heading-tertiary {
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: $color-primary-dark;
+}
+
+.story {
+  width: 75%;
+  margin: 0 auto;
+  box-shadow: 0 3rem 6rem $color-wave-light;
+  background-color: $color-black;
+  border-radius: 3px;
+  padding: 1rem;
+  color: $color-wave-light;
+  font-size: x-large;
+}
