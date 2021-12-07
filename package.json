@@ -6,7 +6,9 @@
   "scripts": {
     "compile:sass": "node-sass sass/main.scss css/style.css",
     "devserver": "live-server",
-    "start": "npm-run-all --parallel devserver watch:sass"
+    "start": "npm-run-all --parallel devserver watch:sass",
+    "build": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "author": "Adam Torres",
   "license": "ISC",
