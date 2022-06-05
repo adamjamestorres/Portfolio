@@ -4,7 +4,6 @@
   }
 
   &__button {
-    background-color: $color-white;
     height: 7rem;
     width: 7rem;
     position: fixed;
@@ -12,6 +11,7 @@
     right: 6rem;
     border-radius: 50%;
     z-index: 2000;
+    background-color: $color-white;
     box-shadow: 0 1rem 3rem rgba($color-black, 0.1);
     text-align: center;
     cursor: pointer;

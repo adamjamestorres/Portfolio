@@ -31,23 +31,26 @@
 *::before {
   margin: 0;
   padding: 0;
-  box-sizing: border-box; }
+  box-sizing: inherit; }
 
 html {
   font-size: 62.5%; }
-  @media only screen and (max-width: 75em) {
-    html {
-      font-size: 56.25%; } }
   @media only screen and (max-width: 56.25em) {
     html {
       font-size: 50%; } }
+  @media only screen and (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
   @media only screen and (min-width: 112.5em) {
     html {
       font-size: 75%; } }
 
-@media only screen and (max-width: 56.25em) {
-  body {
-    padding: 0; } }
+body {
+  box-sizing: border-box;
+  padding: 0; }
+  @media only screen and (max-width: 56.25em) {
+    body {
+      padding: 0; } }
 
 ::selection {
   background-color: #ffd07f;
@@ -189,7 +192,10 @@ body {
   transition: transform 0.3s; }
   @media only screen and (max-width: 56.25em) {
     .feature-box {
-      padding: 2rem; } }
+      padding: 3rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .feature-box {
+      font-size: 2.5rem; } }
   .feature-box__icon {
     font-size: 6rem;
     margin-bottom: 0.5rem;
@@ -330,6 +336,7 @@ body {
 
 .header {
   height: 95vh;
+  padding: 0%;
   background-image: linear-gradient(to right bottom, rgba(32, 39, 49, 0.5), rgba(245, 115, 10, 0.2)), url(../img/low-poly-grid-haikei.svg);
   background-size: cover;
   background-position: top;
@@ -370,6 +377,9 @@ body {
   margin: 0 auto; }
   .row:not(:last-child) {
     margin-bottom: 8rem; }
+    @media only screen and (max-width: 56.25em) {
+      .row:not(:last-child) {
+        margin-bottom: 6rem; } }
   .row::after {
     content: "";
     display: table;
@@ -378,6 +388,13 @@ body {
     float: left; }
     .row [class^="col-"]:not(:last-child) {
       margin-right: 6rem; }
+      @media only screen and (max-width: 56.25em) {
+        .row [class^="col-"]:not(:last-child) {
+          margin-right: 0;
+          margin-bottom: 6rem; } }
+    @media only screen and (max-width: 56.25em) {
+      .row [class^="col-"] {
+        width: 100% !important; } }
   .row .col-1-of-2 {
     width: calc((100% - 6rem) / 2); }
   .row .col-1-of-3 {
@@ -395,7 +412,6 @@ body {
   display: none; }
 
 .navigation__button {
-  background-color: white;
   height: 7rem;
   width: 7rem;
   position: fixed;
@@ -403,6 +419,7 @@ body {
   right: 6rem;
   border-radius: 50%;
   z-index: 2000;
+  background-color: white;
   box-shadow: 0 1rem 3rem rgba(32, 39, 49, 0.1);
   text-align: center;
   cursor: pointer; }

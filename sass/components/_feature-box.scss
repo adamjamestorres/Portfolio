@@ -8,7 +8,11 @@
   transition: transform 0.3s;
 
   @include respond(tab-port) {
-    padding: 2rem;
+    padding: 3rem;
+  }
+
+  @include respond(phone) {
+    font-size: 2.5rem;
   }
 
   &__icon {
