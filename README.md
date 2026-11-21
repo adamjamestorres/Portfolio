@@ -17,4 +17,5 @@ Then open http://localhost:8000.
 
 - `index.html` — content (experience, skills, links)
 - `style.css` — colors, type and layout (tokens at the top)
+- `contours.js` — animated topographic background
 - `favicon.svg` — tab icon
