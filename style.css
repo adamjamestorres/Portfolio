@@ -105,6 +105,33 @@ a:focus-visible {
   padding: clamp(3rem, 12vh, 8rem) var(--gutter) 3rem;
 }
 
+/* ---------- Top bar ---------- */
+.topbar {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1.25rem;
+  margin-top: calc(clamp(3rem, 12vh, 8rem) * -0.6);
+  margin-bottom: clamp(2rem, 6vh, 3.5rem);
+}
+
+.topbar__link {
+  display: inline-flex;
+  color: var(--slate);
+  opacity: 0.75;
+  transition: color 150ms ease, opacity 150ms ease;
+}
+
+.topbar__link:hover {
+  color: var(--ink);
+  opacity: 1;
+}
+
+.icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  flex: none;
+}
+
 /* ---------- Intro: the one loud thing ---------- */
 .intro {
   margin-bottom: clamp(4rem, 12vh, 7rem);
@@ -137,9 +164,35 @@ a:focus-visible {
   letter-spacing: -0.01em;
 }
 
+/* The one call to action: GitHub */
+.cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-top: 2rem;
+  padding: 0.7rem 1.15rem;
+  border-radius: 999px;
+  background: var(--ink);
+  color: var(--paper);
+  font-size: 1rem;
+  font-weight: 550;
+  text-decoration: none;
+  transition: background-color 150ms ease, transform 150ms ease;
+}
+
+.cta:hover {
+  background: var(--signal);
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+.cta .icon {
+  width: 1.1rem;
+  height: 1.1rem;
+}
+
 /* ---------- Sections ---------- */
-.block + .block,
-.contact {
+.block + .block {
   margin-top: clamp(3.5rem, 9vh, 5rem);
 }
 
@@ -218,19 +271,10 @@ a:focus-visible {
   color: var(--slate);
 }
 
-/* Contact */
-.links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem 2rem;
-  padding-top: 1.1rem;
-  font-size: clamp(1.4rem, 3.4vw, 1.85rem);
-  font-weight: 550;
-  letter-spacing: -0.02em;
-}
 
+/* Footer */
 .fineprint {
-  margin-top: 4rem;
+  margin-top: 5rem;
   font-size: 0.875rem;
   color: var(--slate);
 }
@@ -251,7 +295,8 @@ a:focus-visible {
   .name__line + .name__line {
     animation-delay: 120ms;
   }
-  .lede {
+  .lede,
+  .cta {
     animation: fade 700ms 450ms ease both;
   }
 

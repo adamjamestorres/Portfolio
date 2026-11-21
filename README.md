@@ -18,4 +18,5 @@ Then open http://localhost:8000.
 - `index.html` — content (experience, skills, links)
 - `style.css` — colors, type and layout (tokens at the top)
 - `contours.js` — animated topographic background
+- `icons/` — GitHub and LinkedIn icons (Font Awesome Free, CC BY 4.0)
 - `favicon.svg` — tab icon
